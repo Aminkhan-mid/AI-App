@@ -1,6 +1,22 @@
+import {jakeWords} from "./words.js"
 const promptText = document.getElementById("prompt-box")
 const generateBtn = document.getElementById("generate")
+const greeting = document.getElementById("greeting")
 const aiResponse = document.getElementById("ai-response")
+
+
+function getRandomWords(){
+    let random = Math.floor(Math.random() * 50) + 1
+    
+    for(let i = 0; i < jakeWords.length; i++){
+        return jakeWords[random]
+    }
+}
+greeting.innerHTML  = getRandomWords()
+console.log(greeting)
+
+
+
 
 generateBtn.addEventListener("click", async function(){
     const prompt = promptText.value
@@ -25,3 +41,4 @@ promptText.addEventListener("input", ()=>{
     promptText.style.height = "auto"
     promptText.style.height = promptText.scrollHeight + "px"
 })
+
