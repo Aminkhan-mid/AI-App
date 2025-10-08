@@ -31,7 +31,8 @@ nav .span-one{
     gap: 1em;
 }
 .span-one a{
-    color: #f9fefe
+    color: #f9fefe;
+    cursor: pointer;
 }
 nav .span-two{
     color: ivory;

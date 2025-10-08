@@ -3,6 +3,7 @@ const promptText = document.getElementById("prompt-box")
 const generateBtn = document.getElementById("generate")
 const greeting = document.getElementById("greeting")
 const aiResponse = document.getElementById("ai-response")
+let messages = []
 
 
 setInterval(()=>{
@@ -23,10 +24,27 @@ generateBtn.addEventListener("click", async function(){
     const data = await response.json()
     aiResponse.style.display = "block"
     aiResponse.textContent = data.text
+
+    messages = [
+        {
+            role: "user",
+            text: prompt
+        },
+        {
+            role:"AI",
+            text: data.text
+        }
+    ]
+    
+    aiResponse.innerHTML = messages.map(m => `<p><strong>${m.role}:</strong> ${m.text}</p>`).join("");
+
+
+    
+    console.log(messages)
 })
 
 
-// cd Documents/CODE\ PLAYGROUND/AI-APP
+
 
 
 
