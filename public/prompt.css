@@ -67,7 +67,7 @@ nav i{
     left: 50%;
     transform: translate(-50%);
     opacity: 1;
-    border-radius: 10px 10px 0 0;
+    border-radius: 35px 35px 0 0;
     background-color: #2E2E2F;
     display: flex;
     justify-content: space-between;
@@ -88,7 +88,6 @@ button {
 
 textarea{
     background-color: transparent;
-    border-radius: 1em;
     resize: none;
     border: none;
     padding: 25px 10px 15px 10px;
@@ -129,8 +128,9 @@ textarea:focus{
     overflow-y: auto;
     scroll-behavior: smooth;
     scrollbar-width: none;
-    max-width: 600px;
     margin: 1em auto;
+    width: calc(100% - 1em);
+    max-width: 600px;
 }
 
 .user-bubble {
