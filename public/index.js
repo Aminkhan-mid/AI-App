@@ -12,8 +12,8 @@ generateBtn.addEventListener("click", async function(){
         body: JSON.stringify({prompt})
     })
     const data = await response.json()
+    aiResponse.style.display = "block"
     aiResponse.textContent = data.text
-    prompt = ""
 })
 
 

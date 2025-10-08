@@ -114,11 +114,20 @@ textarea:focus{
 /* AI RESPONSE */
 /***********/
 
-.aiResponse{
-    border: 1px solid;
+.response-container{
     height: fit-content;
     min-height: 400px;
     overflow: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
     padding: 1em;
     text-align: left;
+}
+.ai-response{
+    display: none;
+    background-color: #2E2E2F;
+    color: white;
+    padding: 1em;
+    border-radius: 1em;
+    line-height: 1.5;
 }
