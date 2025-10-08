@@ -9,7 +9,7 @@ body{
     font-family: sans-serif;
     background-image: linear-gradient(#174e7b, #457c96, #4c897a);
     background-repeat: no-repeat;
-    height: 100vh;
+    max-height: 100vh;
 }
 
 /***********/
@@ -62,20 +62,7 @@ header .recent-prompt{
     flex-wrap: wrap;
     gap: 0.5em;
     margin: 0 0 1em 1em;
-    max-height: 6em;
-    overflow-x: auto;
-    scroll-behavior: smooth;
     padding-bottom: 1em;
-    scrollbar-width: none;
-    white-space: nowrap;
-
-}
-.all-prompts::-webkit-scrollbar{
-    height: 6px;
-}
-.all-prompts::-webkit-scrollbar-thumb{
-    background-color: #19527c;
-    border-radius: 10px;
 }
 .prompt{
     flex: 0 0 auto;
@@ -86,18 +73,12 @@ header .recent-prompt{
     padding: 0.8em 1em;
     box-shadow: 0px 0px 5px #19527c;
     cursor: pointer;
-    white-space: nowrap;
 }
 
 /***********/
 /* MAIN */
 /***********/
-main {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translate(-50%);
-}
+
 .main-one button{
     border: none;
     padding: 1em 2em;
@@ -111,7 +92,6 @@ main {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 1em;
 }
 
 .jake-greeting{
