@@ -11,7 +11,9 @@ body{
     background-repeat: no-repeat;
     height: 100vh;
 }   
-
+body, html{
+    height: 100%;
+}
 
 /***********/
 /* NAV */
@@ -56,24 +58,25 @@ nav img{
 
 
 /***********/
-/* TEXT-AREAS */
+/* PROMPT BOX */
 /***********/
 
 .textAndBtn{
-    width: 90%;
+    width: 100%;
     max-width: 500px;
     position: fixed;
-    bottom: 20px;
+    bottom: 0;
     left: 50%;
     transform: translate(-50%);
     opacity: 1;
-    border-radius: 6px;
+    border-radius: 10px 10px 0 0;
     background-color: #2E2E2F;
     display: flex;
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
     padding: 0.5em 1em;
+    margin-top: 1em;
 }
 button {
     padding: 1em;
@@ -116,19 +119,33 @@ textarea:focus{
 /***********/
 
 .response-container{
-    height: fit-content;
-    min-height: 400px;
-    overflow: scroll;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    padding: 1em;
-    text-align: left;
-}
-.ai-response{
     display: none;
     background-color: #2E2E2F;
     color: white;
     padding: 1em;
+    margin: 1em;
     border-radius: 1em;
     line-height: 1.5;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.user-bubble {
+    background-color: #f0ff81;
+    color: black;
+    padding: 10px;
+    border-radius: 15px 15px 0 15px;
+    max-width: 70%;
+    margin: 5px 5px 5px auto;
+    text-align: left;
+}
+
+.ai-bubble {
+    background-color: #ffffff;
+    color: black;
+    padding: 10px;
+    border-radius: 15px 15px 15px 0;
+    max-width: 70%;
+    margin: 5px auto 5px 0;
+    text-align: left;
 }

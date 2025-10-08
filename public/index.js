@@ -2,7 +2,7 @@ import {jakeWords} from "./words.js"
 const promptText = document.getElementById("prompt-box")
 const generateBtn = document.getElementById("generate")
 const greeting = document.getElementById("greeting")
-const aiResponse = document.getElementById("ai-response")
+const responseContainer = document.getElementById("ai-response")
 let messages = []
 
 
@@ -12,33 +12,32 @@ setInterval(()=>{
 },2000)
 
 
+function renderMessages(){
+    responseContainer.innerHTML = messages.map(m => {
+        return `
+        <div id="bubble" class="${m.role === 'AI' ? 'ai-bubble' : 'user-bubble'}">
+            ${m.text}
+        </div>`
+    }).join("")
+    
+}
+
 generateBtn.addEventListener("click", async function(){
     const prompt = promptText.value
+    messages.push({role: "user", text: prompt})
     const response = await fetch("/generate", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({prompt})
+        body: JSON.stringify({messages})
     })
     const data = await response.json()
-    aiResponse.style.display = "block"
-    aiResponse.textContent = data.text
 
-    messages = [
-        {
-            role: "user",
-            text: prompt
-        },
-        {
-            role:"AI",
-            text: data.text
-        }
-    ]
-    
-    aiResponse.innerHTML = messages.map(m => `<p><strong>${m.role}:</strong> ${m.text}</p>`).join("");
-
-
+    responseContainer.style.display = "block"
+  
+    messages.push({role: "AI", text: data.text})
+    renderMessages()
     
     console.log(messages)
 })
