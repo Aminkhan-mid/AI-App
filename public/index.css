@@ -79,7 +79,9 @@ header .recent-prompt{
 /* MAIN */
 /***********/
 
-
+main{
+    margin-top: 3em;
+}
 .main-one button{
     border: none;
     padding: 1em 2em;
@@ -93,6 +95,7 @@ header .recent-prompt{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    margin-top: 2em;
 }
 .greeting{
     width:150px;
