@@ -5,18 +5,6 @@ const greeting = document.getElementById("greeting")
 const aiResponse = document.getElementById("ai-response")
 
 
-function getRandomWords(){
-    let random = Math.floor(Math.random() * 50) + 1
-    
-    for(let i = 0; i < jakeWords.length; i++){
-        return jakeWords[random]
-    }
-}
-greeting.innerHTML  = getRandomWords()
-console.log(greeting)
-
-
-
 
 generateBtn.addEventListener("click", async function(){
     const prompt = promptText.value
@@ -34,6 +22,10 @@ generateBtn.addEventListener("click", async function(){
 
 
 // cd Documents/CODE\ PLAYGROUND/AI-APP
+setInterval(()=>{
+    let random = jakeWords[Math.floor(Math.random() * jakeWords.length)]
+    greeting.innerHTML  = random
+},2000)
 
 
 
