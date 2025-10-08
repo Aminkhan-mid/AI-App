@@ -58,17 +58,17 @@ header .recent-prompt{
     margin: 0.4em;
 }
 .all-prompts{
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-rows: repeat(2, auto);
-    grid-auto-columns: max-content;
-    gap: 0.25em 0.25em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
     margin: 0 0 1em 0.5em;
+    max-height: 6em;
     overflow-x: auto;
     scroll-behavior: smooth;
     padding-bottom: 1em;
     scrollbar-width: none;
     white-space: nowrap;
+
 }
 .all-prompts::-webkit-scrollbar{
     height: 6px;
@@ -78,14 +78,15 @@ header .recent-prompt{
     border-radius: 10px;
 }
 .prompt{
+    flex: 0 0 auto;
     background-color: lightblue;
     color: #19527c;
     border-radius: 1em;
     border: none;
-    padding: 1em;
-    width: fit-content;
+    padding: 0.8em 1em;
     box-shadow: 0px 0px 5px #19527c;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 /***********/
