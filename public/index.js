@@ -25,6 +25,11 @@ function renderMessages(){
 generateBtn.addEventListener("click", async function(){
     const prompt = promptText.value
     messages.push({role: "user", text: prompt})
+
+
+    const loader = document.getElementById("loader")
+    loader.style.display = "block"
+
     const response = await fetch("/generate", {
         method: "POST",
         headers: {
@@ -35,6 +40,7 @@ generateBtn.addEventListener("click", async function(){
     const data = await response.json()
 
     responseContainer.style.display = "block"
+    loader.style.display = "none"
   
     messages.push({role: "AI", text: data.text})
     renderMessages()

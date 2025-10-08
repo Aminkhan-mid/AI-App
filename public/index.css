@@ -11,7 +11,9 @@ body{
     background-repeat: no-repeat;
     height: 100vh;
 }
-
+body, html{
+    height: 100%;
+}
 /***********/
 /* NAV */
 /***********/
@@ -141,3 +143,11 @@ main{
     font-size: 3rem;
     cursor: pointer;
 }
+
+
+
+
+
+
+
+
