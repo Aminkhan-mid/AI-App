@@ -62,8 +62,8 @@ header .recent-prompt{
     grid-auto-flow: column;
     grid-template-rows: repeat(2, auto);
     grid-auto-columns: max-content;
-    gap: 0.5em 1em;
-    margin: 0em 0 1em 0.5em;
+    gap: 0.25em 0.25em;
+    margin: 0 0 1em 0.5em;
     overflow-x: auto;
     scroll-behavior: smooth;
     padding-bottom: 1em;
