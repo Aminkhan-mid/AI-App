@@ -162,11 +162,23 @@ textarea:focus{
     display: none; /* hide by default */
     z-index: 1000;
 }
-#loader svg{
-    margin: 0;
-}
-#loader p{
-    margin: 0;
-    font-weight: bold;
+.loader svg{
+    width: 100px;
+    height: 100px;
 }
 
+.loader svg rect {
+    fill: #000;
+    width: 30px;
+    height: 30px;
+    animation: bounce 1s infinite ease-in-out;
+}
+
+.loader svg rect:nth-child(1) { animation-delay: 0s; }
+.loader svg rect:nth-child(2) { animation-delay: 0.2s; }
+.loader svg rect:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+}

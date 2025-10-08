@@ -39,10 +39,12 @@ generateBtn.addEventListener("click", async function(){
     })
     const data = await response.json()
 
-    responseContainer.style.display = "block"
     loader.style.display = "none"
+    responseContainer.style.display = "block"
   
     messages.push({role: "AI", text: data.text})
+    promptText.value = ""
+    promptText.style.height = "auto"
     renderMessages()
     
     console.log(messages)
