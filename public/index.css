@@ -20,7 +20,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:0.5em;
+    padding:0.5em 1em;
 }
 nav span{
     width: 50px;
@@ -49,19 +49,19 @@ header{
 header h1{
     width: 280px;
     font-size: 2.5rem;
-    margin: 0.5em 0 0.5em 0.3em;
+    margin: 0.5em 0 0.5em 0.4em;
     text-align: left;
 }
-header .recent-prompt{
 
+header .recent-prompt{
     width: fit-content;
-    margin: 0.4em;
+    margin: 0.4em 0 0.4em 1em;
 }
 .all-prompts{
     display: flex;
     flex-wrap: wrap;
     gap: 0.5em;
-    margin: 0 0 1em 0.5em;
+    margin: 0 0 1em 1em;
     max-height: 6em;
     overflow-x: auto;
     scroll-behavior: smooth;
@@ -92,6 +92,12 @@ header .recent-prompt{
 /***********/
 /* MAIN */
 /***********/
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
 .main-one button{
     border: none;
     padding: 1em 2em;
