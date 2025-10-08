@@ -13,6 +13,7 @@ generateBtn.addEventListener("click", async function(){
     })
     const data = await response.json()
     aiResponse.textContent = data.text
+    prompt = ""
 })
 
 
