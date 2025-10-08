@@ -13,17 +13,106 @@ body{
 }   
 
 
+/***********/
+/* NAV */
+/***********/
+nav{
+    color: #f9fefe;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0.5em;
+    border-bottom: 1px solid black;
+    margin-bottom: 1em;
+}
+
+nav .span-one{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+.span-one a{
+    color: #f9fefe
+}
+nav .span-two{
+    color: ivory;
+    text-align: left;
+}
+.span-two .text-writer{
+    font-size: 1.5rem;
+    color: gainsboro;
+    text-shadow: 1px 1px 1px black;
+}
+.span-two .idea{
+    filter: opacity(40%);
+    font-size: 0.8rem;
+}
+nav img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 2px black;
+}
+
+
+/***********/
+/* TEXT-AREAS */
+/***********/
+
+.textAndBtn{
+    width: 90%;
+    max-width: 500px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    opacity: 1;
+    border-radius: 6px;
+    background-color: #2E2E2F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    padding: 0.5em 1em;
+}
+button {
+    padding: 1em;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border: 1px solid white;
+}
 
 textarea{
-    width: 150px;
-    height: 150px;
-    border-radius: 1.5em;
-    padding: 1em;
-    font-size: 1.3em;
+    background-color: transparent;
+    border-radius: 1em;
     resize: none;
     border: none;
+    padding: 25px 10px 15px 10px;
+    color: white;
 }
-textarea::placeholder, :focus{
-    padding: 1em;
+textarea::placeholder{
+    color: #888;
+
+}
+textarea:focus{
     outline: none;
 }
+#auto-promptText {
+    width: 90%;
+    min-height: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: hidden; /* hide scrollbar */
+    resize: none;       /* prevent manual resizing */
+}
+
+
+
+/***********/
+/* AI RESPONSE */
+/***********/
+

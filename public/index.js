@@ -17,3 +17,10 @@ generateBtn.addEventListener("click", async function(){
 
 
 // cd Documents/CODE\ PLAYGROUND/AI-APP
+
+
+
+promptText.addEventListener("input", ()=>{
+    promptText.style.height = "auto"
+    promptText.style.height = promptText.scrollHeight + "px"
+})
