@@ -1,0 +1,28 @@
+{
+  "type":"module",
+  "name": "ai-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node logic.js",
+    "dev": "nodemon logic.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aminkhan-mid/AI-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aminkhan-mid/AI-App/issues"
+  },
+  "homepage": "https://github.com/Aminkhan-mid/AI-App#readme",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0"
+  }
+}

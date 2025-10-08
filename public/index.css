@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    text-align: center;
+    font-family: sans-serif;
+}
+h1{
+    margin: 2em;
+}
+textarea{
+    margin: 1em;
+    padding: 1em;
+    width: 350px;
+    height: 130px;
+    resize: none;
+    box-shadow: 5px 5px 0px black;
+    border: 2px solid black;
+    font-size: 1.56rem;
+}
+textarea:focus{
+    outline: none;
+}
+
+button{
+    display: block;
+    margin: 1em  auto;
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    box-shadow: 2px 2px 1px black;
+    cursor: pointer;
+}
+
+p{
+    width: 300px;
+    height: 150px;
+    max-height: fit-content;
+    box-shadow: 4px 4px navy;
+    border: 2px solid navy;
+    display: block;
+    margin: auto;
+    border-radius: 0.5em;
+}
