@@ -6,8 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node logic.js",
-    "dev": "nodemon logic.js"
+    "start": "node logic.js"
   },
   "repository": {
     "type": "git",
