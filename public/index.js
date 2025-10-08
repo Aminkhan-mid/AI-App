@@ -4,13 +4,15 @@ const aiResponse = document.getElementById("ai-response")
 
 generateBtn.addEventListener("click", async function(){
     const prompt = promptText.value
-    const request = await fetch("/generate", {
+    const response = await fetch("/generate", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: prompt
+        body: JSON.stringify({prompt})
     })
-    const data = await request.json()
+    const data = await response.json()
     aiResponse.textContent = data.text
 })
+
+

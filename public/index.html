@@ -4,19 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CHATBOT-AI</title>
+    <!-- CSS LINK -->
     <link rel="stylesheet" href="./index.css">
+    <!-- CDN FONT-AWSOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- FAVICON LINKS -->
+     <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/favicon_io/site.webmanifest">
 </head>
 <body>
 
+<nav>
+    <span>
+        <i class="fa-solid fa-hexagon-nodes"></i>
+    </span>
+    <img src="./images/amin.jpeg" alt="amin">
+</nav>
 
-    <h1>Ready When you are.</h1>
-    <textarea name="prompt" id="prompt-box" placeholder="Write your Prompt!"></textarea>
+<header>
+    <h1>Ready when you are.</h1>
 
-    <button id="generate">Generate</button>
+    <p class="recent-prompt">Recent prompts</p>
 
-    <p id="ai-response"></p>
+    <div class="all-prompts">
+        <p class="prompt">Eating Plan</p>
+        <p class="prompt">Best UI/UX books</p>
+        <p class="prompt">Best budgeting apps</p>
+        <p class="prompt">Effective workout routine</p>
+        <p class="prompt">Self-help books</p>
+        <p class="prompt">Gardening tips</p>
+    </div>
+</header>
 
+    
+<textarea name="user-input" id="prompt-box" placeholder="Ask anything"></textarea>
+<button id="generate">Generate</button>
+<p id="ai-response"></p>
 
-    <script src="index.js"></script>
+    <main>
+        <div class="main-two">
+            <p class="jake-greeting">Hey — I’m Jack. Ready to bend reality, find treasure, and answer your questions.</p>
+            <div class="startPrompt">
+                <div class="flex">
+                    <p class="gardening">Gardening tips</p>
+                    <p class="text-writer">Text writer</p>
+                </div>
+                <a href="./prompt.html">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script src="index.js" type="module"></script>
 </body>
 </html>
