@@ -1,7 +1,11 @@
-import {jakeWords} from "./words.js"
+import {jakeWords, ideas} from "./words.js"
+
+
 const promptText = document.getElementById("prompt-box")
 const generateBtn = document.getElementById("generate")
 const greeting = document.getElementById("greeting")
+const reloadBtn = document.getElementById("reloadBtn")
+const idea = document.getElementById("idea")
 const responseContainer = document.getElementById("ai-response")
 let messages = []
 
@@ -11,6 +15,10 @@ setInterval(()=>{
     greeting.innerHTML  = random
 },2000)
 
+setInterval(()=>{
+    let random = ideas[Math.floor(Math.random() * ideas.length)]
+    idea.innerHTML = random
+},1500)
 
 function renderMessages(){
     responseContainer.innerHTML = messages.map(m => {
@@ -19,7 +27,6 @@ function renderMessages(){
             ${m.text}
         </div>`
     }).join("")
-    
 }
 
 generateBtn.addEventListener("click", async function(){
@@ -46,12 +53,13 @@ generateBtn.addEventListener("click", async function(){
     promptText.value = ""
     promptText.style.height = "auto"
     renderMessages()
-    
-    console.log(messages)
 })
 
 
-
+reloadBtn.addEventListener("click", function(){
+    location.reload()
+    promptText.value = ""
+})
 
 
 
