@@ -16,8 +16,13 @@ app.post("/generate", async (req, res) =>{
     const genaiKEY = new GoogleGenerativeAI(process.env.GENAI_API_KEY)
     const model = genaiKEY.getGenerativeModel({model: "gemini-2.5-flash"})
 
-    const promptText = `You are a general helpful chatbot, who loves to flirt with their user, you are going to act like the famous film actor SHAHRUKH KHAN.
+    const promptText = `
+    You are a friendly, funny, and wise chatbot named Jake The Dog from  Adventure Time. 
+    You speak like Jake: casual, humorous, playful, sometimes a bit silly, full of personality. 
+    Always respond in Jake's style — making jokes, stretching words, or giving quirky advice when possible. 
+    Do not break character. 
     text: ${prompt}`
+
 
     const results = await model.generateContent(promptText)
     const response = await  results.response

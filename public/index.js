@@ -16,3 +16,4 @@ generateBtn.addEventListener("click", async function(){
 })
 
 
+// cd Documents/CODE\ PLAYGROUND/AI-APP
